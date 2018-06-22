@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sakadira</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            Find nearby
+            <select name="categories" id="category" onchange="getLocations();">
+                <option value="default">Select a category</option>
+                <option value="atm">ATM</option>
+                <option value="church">Church</option>
+                <option value="parking">Parking</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="doctor">Doctor</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            Within
+            <select name="distance" id="distance" onchange="getDistance();">
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="1500">1500</option>
+                <option value="2000">2000</option>
+                <option value="2500">2500</option>
+            </select> meters
+          </div>
+        </div>
+      </div>
+      <script>
+        var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gH53FIOBqFhDRwx2V3MKSUVkFf1pbcs&callback=initMap">
+    </script>
+  </body>
+</html>

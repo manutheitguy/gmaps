@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sakadira</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="home">
+    <!-- TOPBAR SECTION -->
+    <div id="topbar" class="container-fluid pt-3">
+        <div id="search" class="container">
+            <div class="row mb-2 pt-3">
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="category">Find nearby</label>
+                        </div>
+                        <select class="custom-select" id="category" onchange="getLocations();">
+                            <option selected>Select a category</option>
+                            <option value="atm">ATM</option>
+                            <option value="church">Church</option>
+                            <option value="parking">Parking</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="doctor">Doctor</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="distance">Within</label>
+                        </div>
+                        <select class="custom-select" id="distance" onchange="getDistance();">
+                            <option selected>500 Meters</option>
+                            <option value="1000">1000 Meters</option>
+                            <option value="1500">1500 Meters</option>
+                            <option value="2000">2000 Meters</option>
+                            <option value="2500">2500 Meters</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="col-sm input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Specify location" aria-label="Specify location" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Search</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF TOPBAR -->
+
+    <!-- MAP SECTION -->
+    <div id="map"></div>
+    <!-- END OF MAP SECTION -->
+
+    <!-- FEATURED SECTION -->
+    <div class="container">
+        <div class="ml-auto p-4">
+            <h1>Featured places</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+
+            </div>
+        </div>
+    </div>
+    <!-- END OF FEATURED SECTION -->
+    <script src="js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gH53FIOBqFhDRwx2V3MKSUVkFf1pbcs&callback=initMap" async
+        defer></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gH53FIOBqFhDRwx2V3MKSUVkFf1pbcs&libraries=places"></script>
+</body>
+
+</html>

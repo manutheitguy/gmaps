@@ -1,0 +1,27 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#home {
+  background-color: #e0e0e0;
+  z-index: -2;
+}
+#topbar {
+  z-index: 1;
+}
+#search {
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: #c2c2c2;
+  border-radius: 3px;
+}
+#map {
+  height: 100%;
+  z-index: -1;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
